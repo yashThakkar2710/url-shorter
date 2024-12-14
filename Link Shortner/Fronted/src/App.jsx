@@ -23,10 +23,5 @@ function App() {
   );
 }
 
-// Protected Route Component
-const ProtectedRoute = () => {
-  const { userAuth } = useContext(UserContext);
-  return userAuth ? <Home /> : <Navigate to="/login" />;
-};
 
 export default App;
