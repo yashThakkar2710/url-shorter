@@ -52,7 +52,7 @@ const getShortUrl = asyncHandler(async (req, res) => {
 
   try {
     // Fetch URL by shortId and populate the user details
-    const urlRecord = await Url.findOne({ shortId }).populate("user");
+    const urlRecord = await Url.findOne({ shortId })
     if (!urlRecord) {
       return res.status(404).json(new ApiResponse(404, null, "URL not found"));
     }
